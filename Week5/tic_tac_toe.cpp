@@ -9,6 +9,14 @@
 
 #include <iostream>
 
+// Initialize a character list for the squares in the game
+char space[3][3] = {{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
+int row;
+int column;
+char token = 'x';
+bool tie = false;
+
+void functionOne();
 
 int main()
 {
@@ -18,8 +26,14 @@ int main()
     std::cout << "|           Gus' Tic Tac Toe Game           |" << std::endl;
     std::cout << "+-------------------------------------------+" << std::endl;
 
-    // Initialize a character list for the squares in the game
-    char space[3][3] = {{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
+    functionOne();
+
+    return 0;
+
+}
+
+void functionOne()
+{
 
     // Build the game grid
     std::cout << "     |     |     \n";
