@@ -37,6 +37,7 @@ int main()
         functionThree();
     }
 
+    // TODO: Determine wins and losses
     if(token == 'x' && tie == false)
     {
         std::cout << n2 << " Wins!" << std::endl;

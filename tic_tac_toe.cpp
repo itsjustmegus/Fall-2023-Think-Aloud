@@ -2,7 +2,7 @@
  * Name:    tic_tac_toe.cpp
  * Author:  Gus Allred
  * Cretaed: 09/13/23
- * Revised: 09/26/23
+ * Revised: 10/04/23
  * Purpose: Simple C++ tic tac toe game
  *          Following the tutorial from https://www.simplilearn.com/tutorials/cpp-tutorial/game-in-cpp
  */
@@ -18,18 +18,52 @@ bool tie = false;
 std::string n1;
 std::string n2;
 
+void title();
+void get_players();
 void functionOne();
 void functionTwo();
 bool functionThree();
 
 int main()
 {
+    title();
+    get_players();
+    functionOne();
 
+    // Loop until the game ends
+    while (!functionThree())
+    {
+        functionTwo();
+        functionThree();
+    }
+
+    // TODO: Determine wins and losses
+    if(token == 'x' && tie == false)
+    {
+        std::cout << n2 << " Wins!" << std::endl;
+    }
+    else if(token == 'o' && tie == false)
+    {
+        std::cout << n1 << " Wins!" << std::endl;
+    }
+    else
+    {
+        std::cout << "It's a draw!" << std::endl;
+    }
+
+    return 0;
+}
+
+void title()
+{
     // Create a title
     std::cout << "+-------------------------------------------+" << std::endl;
     std::cout << "|           Gus' Tic Tac Toe Game           |" << std::endl;
     std::cout << "+-------------------------------------------+" << std::endl;
+}
 
+void get_players()
+{
     std::cout << "Enter first player's name: ";
     std::getline(std::cin, n1);
 
@@ -38,17 +72,6 @@ int main()
 
     std::cout << n1 << " is player 1 and goes first" << std::endl;
     std::cout << n2 << " is player 2 and goes second" << std::endl;
-
-    // Loop until the game ends
-    while (!functionThree())
-    {
-        functionOne();
-        functionTwo();
-        functionThree();
-    }
-
-    return 0;
-
 }
 
 void functionOne()
@@ -197,5 +220,3 @@ bool functionThree()
     tie = true;
     return false;
 }
-
-// TODO: Determine wins and losses
