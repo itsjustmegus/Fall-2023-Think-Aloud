@@ -12,12 +12,14 @@
 #include <iostream>
 // conio.h handles input and output for this program
 #include <conio.h>
+// include library for sleep method
+#include <unistd.h>
 
 // Game over method
 bool gameOver;
 // Create map dimension variables
-const int WIDTH = 70;
-const int HEIGHT = 40;
+const int WIDTH = 50;
+const int HEIGHT = 30;
 
 // Create head position variables
 int x;
@@ -277,6 +279,8 @@ int main()
         draw();
         input();
         logic();
+        // sleep method to slow down refreshing
+        sleep(0.3);
     }
     // Call GameOver method
     GameOver();
