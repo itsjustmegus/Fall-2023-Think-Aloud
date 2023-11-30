@@ -2,7 +2,7 @@
  * Name: snake_game.cpp
  * Author: Gus Allred
  * Created: 10/30/23
- * Revised: 11/15/23
+ * Revised: 11/28/23
  * Purpose: Simple visual snake game. I'm following a tutorial from NVitanovic on YouTube
  * Part 1: https://www.youtube.com/watch?v=E_-lMZDi7Uw
  * Part 2: https://youtu.be/W1e5wO7XR2w?si=VzWno4buDizIHEh4

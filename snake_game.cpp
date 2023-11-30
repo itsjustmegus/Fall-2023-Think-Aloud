@@ -2,7 +2,7 @@
  * Name: snake_game.cpp
  * Author: Gus Allred
  * Created: 10/30/23
- * Revised: 11/15/23
+ * Revised: 11/28/23
  * Purpose: Simple visual snake game. I'm following a tutorial from NVitanovic on YouTube
  * Part 1: https://www.youtube.com/watch?v=E_-lMZDi7Uw
  * Part 2: https://youtu.be/W1e5wO7XR2w?si=VzWno4buDizIHEh4
@@ -243,6 +243,28 @@ void logic()
     }
 }
 
+// GameOver method for printing the final score
+void GameOver()
+{
+    // Clear the screen
+    // std::system("clear") for Linux
+    std::system("cls");
+    // Print final score
+    for (int i = 0; i < HEIGHT / 2; i++)
+    {
+        std::cout << std::endl;
+    }
+    for (int i = 0; i < WIDTH / 2; i++)
+    {
+        std::cout << " ";
+    }
+    std::cout << "Final Score: " << score << std::endl;
+    for (int i = 0; i < HEIGHT / 2; i++)
+    {
+        std::cout << std::endl;
+    }
+}
+
 // Main method
 int main()
 {
@@ -256,6 +278,8 @@ int main()
         input();
         logic();
     }
+    // Call GameOver method
+    GameOver();
 
     return 0;
 }
